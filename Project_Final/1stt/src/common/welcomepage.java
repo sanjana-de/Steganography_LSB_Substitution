@@ -56,8 +56,7 @@ public class welcomepage extends JFrame {
 	public welcomepage() 
 	{
 		setForeground(new Color(255, 255, 255));
-		setBackground(new Color(204, 204, 204));
-				
+		setBackground(new Color(204, 204, 204));		
 		initComponents();
 		createEvents();
 		
@@ -93,20 +92,16 @@ public class welcomepage extends JFrame {
 		   login.setBackground(new Color(255,255,255,70));
 		   login.setBounds(250, 175, 400, 350);
 
-		
 	    JLabel lblDoYouWant = new JLabel("Do you wish to encode or decode?");
 		lblDoYouWant.setForeground(new Color(204, 255, 255));
 		lblDoYouWant.setBackground(new Color(255, 255, 255));
 		lblDoYouWant.setBounds(45, 50, 300, 50);
 		lblDoYouWant.setFont(new Font("High Tower Text", Font.BOLD | Font.ITALIC, 22));
 		
-		
-		
 		btnEncode = new JButton("Encode");
 		btnEncode.setFont(new Font("High Tower Text", Font.BOLD | Font.ITALIC, 20));
 		btnEncode.setBackground(new Color(250, 235, 215));
-	
-		
+
 		btnDecode = new JButton("Decode");
 		btnDecode.setBackground(new Color(250, 235, 215));
 		btnDecode.setFont(new Font("High Tower Text", Font.BOLD | Font.ITALIC, 20));
@@ -148,22 +143,17 @@ public class welcomepage extends JFrame {
 					.addGap(45))
 		);
 		contentPane.setLayout(gl_contentPane);
-		
-		
 	}
 
-	
 	//method to create events for the components
 	private void createEvents() 
 	{
-		
 		btnDecode.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				JOptionPane.showMessageDialog(null, "You are being taken to the Decoder's Page");
 				DecoderView dv = new DecoderView();
 				dv.setVisible(true);
-				
 			}
 		});
 		
@@ -175,8 +165,5 @@ public class welcomepage extends JFrame {
 				ev.setVisible(true);
 			}
 		});
-		
-		
-		
 	}
 }
