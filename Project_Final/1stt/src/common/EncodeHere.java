@@ -1,18 +1,14 @@
 package common;
-import java.io.*;
 
 import common.LSB_encode;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -48,18 +44,13 @@ public class EncodeHere extends JFrame {
 	 */
 	public EncodeHere() 
 	{
-		
 		initComponents();
 		createEvents();
-		
-	
 	}
 
-	
 	//initializing the components
 	public void initComponents() 
 	{
-
 		setTitle("Encoding Image");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(EncodeHere.class.getResource("/resources/bulb-curvy-flat.png")));
 		
@@ -81,7 +72,6 @@ public class EncodeHere extends JFrame {
 		btnEncode.setBackground(new Color(250, 235, 215));
 		btnEncode.setFont(new Font("High Tower Text", Font.BOLD | Font.ITALIC, 24));
 		
-		
 		btnNext = new JButton("Next");
 		btnNext.setForeground(new Color(0, 128, 128));
 		btnNext.setFont(new Font("High Tower Text", Font.BOLD | Font.ITALIC, 20));
@@ -89,7 +79,6 @@ public class EncodeHere extends JFrame {
 		btnShowStegoImage = new JButton("Show Stego Image");
 		btnShowStegoImage.setForeground(new Color(0, 128, 128));
 		btnShowStegoImage.setFont(new Font("High Tower Text", Font.BOLD | Font.ITALIC, 21));
-
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
@@ -120,21 +109,15 @@ public class EncodeHere extends JFrame {
 					.addContainerGap())
 		);
 		contentPane.setLayout(gl_contentPane);
-		
 	}
 
 	public void createEvents() 
 	{
-		
 		btnShowStegoImage.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
-				
-
-				SwingOpenImage sp = new SwingOpenImage();
+				//SwingOpenImage sp = new SwingOpenImage();
 				SwingOpenImage.main(null);
-				
-				
 			}
 		});
 		
@@ -153,9 +136,8 @@ public class EncodeHere extends JFrame {
 		btnEncode.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
-				
 				try {
-					LSB_encode.main(null);
+					common.LSB_encode.main(null);
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -163,8 +145,5 @@ public class EncodeHere extends JFrame {
 				JOptionPane.showMessageDialog(null, "Your mesage has been encoded within the given image!");
 			}
 		});
-		// actual code to be called from here somewhere
-		
 	}
-
 }

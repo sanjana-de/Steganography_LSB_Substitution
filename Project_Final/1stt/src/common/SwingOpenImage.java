@@ -1,6 +1,4 @@
 package common; 
-
-//import javax.swing.SwingUtilities;
 import java.io.File;
 import javax.imageio.ImageIO;
 import java.awt.BorderLayout;
@@ -10,11 +8,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
-//import 
+
 public class SwingOpenImage 
 {
 	private JFrame frame;
-	//constructing frame
+	//Constructing frame
 	public SwingOpenImage(String filepath)
 	{
 		SwingUtilities.invokeLater(new Runnable() {
@@ -43,8 +41,6 @@ public class SwingOpenImage
 }
 	
 	public SwingOpenImage() {
-		
-		
 		// TODO Auto-generated constructor stub
 	}
 

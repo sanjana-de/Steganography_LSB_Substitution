@@ -56,19 +56,13 @@ public class EncoderView extends JFrame {
 	 */
 	public EncoderView() 
 	{
-		
 		initComonents();
 		createEvents();
-		
 	}
 
-	
 	//to initialize the components
 	private void initComonents() 
 	{
-		
-		
-
 		setIconImage(Toolkit.getDefaultToolkit().getImage(EncoderView.class.getResource("/resources/bulb-curvy-flat.png")));
 		setTitle("Encoder's End");
 		
@@ -147,25 +141,17 @@ public class EncoderView extends JFrame {
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
-
 	
 	//to create the events for the components
 	private void createEvents() 
 	{
-		
-		
 		btnProceed.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				
 				EncodeHere eh = new EncodeHere();
 				eh.setVisible(true);
-				
 				key= passwordField.getPassword();
 			}
-		});
-		
-	
-		
+		});	
 	}
 }

@@ -1,18 +1,10 @@
 package common;
-
-import java.awt.BorderLayout;
-
-import common.EncoderView;
-
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -23,9 +15,6 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.border.MatteBorder;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.Arrays;
 
 public class DecoderView extends JFrame {
 
@@ -134,14 +123,9 @@ public class DecoderView extends JFrame {
 		contentPane.setLayout(gl_contentPane);
 		
 	}
-
-	
 	//to create events for the components
 	public void createEvents() 
 	{
-		
-		
-		
 		btnProceed.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
@@ -149,24 +133,11 @@ public class DecoderView extends JFrame {
 				
 				EncoderView eh = new EncoderView();
 				key1 = eh.key;
-				
-				
-				//if(key1.equals(key2))
-				//if(Arrays.equals(eh.passwordField.getPassword(),passwordField.getPassword()))
 				{
-					//JOptionPane.showMessageDialog(null, "Password matches!!");
 					DecodeHere dh = new DecodeHere();
 					dh.setVisible(true);
 				}
-				
-				/**else
-				{
-					JOptionPane.showMessageDialog(null, "Your key doesn't match with the sender's key.");
-				}**/
 			}
-		});
-
-		
+		});	
 	}
-
 }

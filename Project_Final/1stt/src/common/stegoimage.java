@@ -1,6 +1,4 @@
 package common;
-
-
 import java.awt.Container;
 import java.awt.EventQueue;
 import javax.swing.GroupLayout;
@@ -58,7 +56,6 @@ public class stegoimage extends JFrame
 
     public static void main(String[] args) 
     {
-
         EventQueue.invokeLater(() -> {
         	stegoimage ex = new stegoimage();
             ex.setVisible(true);

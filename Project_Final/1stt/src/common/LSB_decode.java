@@ -1,10 +1,4 @@
 package common;
-
-//public class LSB_decode {
-
-//}
-
-
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -37,8 +31,7 @@ public class LSB_decode
 		BufferedImage yImage=readImageFile(STEGIMAGEFILE);
 
 		DecodeTheMessage(yImage);
-		
-		//System.out.println("len is "+len*8);
+
 		for(int i=0;i<len*8;i=i+8)
 		{
 	
@@ -98,7 +91,6 @@ public class LSB_decode
 				
 				else if(currentBitEntry<len*8)
 				{
-					//System.out.println("enc "+yImage.getRGB(x, y)+" dec "+yImage.getRGB(x, y)+" "+b_msg);
 					int currentPixel = yImage.getRGB(x, y);	
 					int red = currentPixel>>16;
 					red = red & 255;
@@ -111,7 +103,6 @@ public class LSB_decode
 
 	
 					currentBitEntry++;	
-					//System.out.println("curre "+currentBitEntry);
 				}
 			}
 		}

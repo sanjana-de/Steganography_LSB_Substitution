@@ -1,10 +1,4 @@
 package common;
-
-//public class LSB_encode {
-
-//}
-
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -171,11 +165,9 @@ public static void hideTheMessage (int[] bits, BufferedImage theImage) throws Ex
 				int a=255;
 				int rgb = (a<<24) | (red<<16) | (green<<8) | s_pixel;
 				theImage.setRGB(x, y, rgb);
-				//System.out.println("original "+ori+" after "+theImage.getRGB(x, y));
 				ImageIO.write(theImage, "png", f);
 
-				currentBitEntry++;	
-				//System.out.println("curre "+currentBitEntry);
+				currentBitEntry++;
 			}
 		}
 	}
