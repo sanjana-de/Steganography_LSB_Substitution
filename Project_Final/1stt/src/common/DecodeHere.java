@@ -1,24 +1,17 @@
 package common;
-
-import common.LSB_decode;
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.event.ContainerAdapter;
-import java.awt.event.ContainerEvent;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.border.MatteBorder;
@@ -174,12 +167,7 @@ public class DecodeHere extends JFrame {
 				textField.setText(s);
 				
 			}
-		});
-		
-
-		
-
-		
+		});	
 	}
 
 }
